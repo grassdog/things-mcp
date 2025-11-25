@@ -23,7 +23,9 @@ def format_todo(todo: dict) -> str:
         todo_text += f"\nList: {todo['start']}"
 
     # Add dates
-    if todo.get('start_date'):
+    if todo.get("created"):
+        todo_text += f"\nCreate Date: {todo['created']}"
+    if todo.get("start_date"):
         todo_text += f"\nStart Date: {todo['start_date']}"
     if todo.get('deadline'):
         todo_text += f"\nDeadline: {todo['deadline']}"
